@@ -1,0 +1,171 @@
+{
+  "info": {
+    "_postman_id": "e0dfbedc-0992-42f2-b994-daf0a6624389",
+    "name": "p48_asp",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "30561330",
+    "_collection_link": "https://go.postman.co/collection/30561330-e0dfbedc-0992-42f2-b994-daf0a6624389?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "healthcheck",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/health/",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "health",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "object",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/object/",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "object",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "greeting",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/greet/{{$randomFirstName}}",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "greet",
+            "{{$randomFirstName}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"1234\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{host}}/api/users/login/",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "login",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "api/search",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/api/search?query=How%20to%20create%20React%20app&page=25",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "api",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "query",
+              "value": "How%20to%20create%20React%20app",
+              "type": "text"
+            },
+            {
+              "key": "page",
+              "value": "25",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "httpContext",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{host}}/httpContext",
+          "host": [
+            "{{host}}"
+          ],
+          "path": [
+            "httpContext"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "host",
+      "value": ""
+    }
+  ]
+}
